@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Add this to your CSS file or inside a <style> tag in your component */
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Instagram */
+.social-icons a[href*="instagram.com"]:hover .social-icon {
+  background: linear-gradient(
+      200deg, 
+      #405de6, 
+      #5851db, 
+      #833ab4, 
+      #c13584, 
+      #e1306c, 
+      #f56040, 
+      #f77737, 
+      #fcaf45, 
+      #ffdc80
+  );
 }
