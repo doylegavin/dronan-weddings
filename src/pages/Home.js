@@ -25,8 +25,7 @@ const Testimonials = React.lazy(() => import('../components/Testimonials'));
             </h1>
             <br/>
             <p className={`${openNavigation ? 'hidden' : 'block'} text-white  font-bold`}>Making wedding's simple</p><br/>
-            <p className={`${openNavigation ? 'hidden' : 'block'} text-white  font-bold`}>Book Your Dream Wedding Video</p><br/>
-            <p className={`${openNavigation ? 'hidden' : 'block'} text-white  font-bold`}>See Packages</p>
+           
           </div>
         </header>
         <section className="py-12 bg-gray-200">
