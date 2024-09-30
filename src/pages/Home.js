@@ -1,5 +1,5 @@
 // src/pages/Home.js
-import React from 'react';
+import React, { useEffect, useState, Suspense, useMemo } from 'react';
 import PackagesSection from '../components/PackagesSection';
 import Elopements from '../components/Elopement';
 import Footer from '../components/Footer';
@@ -7,7 +7,37 @@ import ContactButton from '../components/ContactButton';
 
 const Testimonials = React.lazy(() => import('../components/Testimonials'));
 
- function Home({ openNavigation }) {
+const images = [
+  '/Media/Stills/MAC2.jpg',
+  '/Media/Stills/MAC3.jpg',
+  '/Media/Stills/MAC5.jpg',
+  '/Media/Stills/MAC4.jpg',
+];
+
+function Home({ openNavigation }) {
+  const [canAutoplay, setCanAutoplay] = useState(false);
+
+  useEffect(() => {
+    const video = document.createElement('video');
+    video.src = '/Media/Videos/HomeVideo.mp4';
+    video.muted = true;
+    video.play().then(() => {
+      setCanAutoplay(true);
+    }).catch(() => {
+      setCanAutoplay(false);
+    });
+  }, []);
+
+  const headerContent = useMemo(() => (
+    <div className='relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50'>
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white text-5xl md:text-7xl font-bold`}>
+        Dronan Videography
+      </h1>
+      <br/>
+      <p className={`${openNavigation ? 'hidden' : 'block'} text-white font-bold`}>Making wedding's simple</p><br/>
+    </div>
+  ), [openNavigation]);
+
   return (
     <>
       <div className="overflow-hidden">
@@ -15,18 +45,19 @@ const Testimonials = React.lazy(() => import('../components/Testimonials'));
       </div>
       <div>
         <header className="relative w-full h-screen overflow-hidden">
-          <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
-            <source src="/Media/Videos/HomeVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className= 'relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50'>
-            <h1 className= {`${openNavigation ? 'hidden' : 'block'} text-white text-5xl md:text-7xl font-bold`}>
-              Dronan Videography
-            </h1>
-            <br/>
-            <p className={`${openNavigation ? 'hidden' : 'block'} text-white  font-bold`}>Making wedding's simple</p><br/>
-           
-          </div>
+          {canAutoplay ? (
+            <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+              <source src="/Media/Videos/HomeVideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <div className="absolute top-0 left-0 w-full h-full object-cover slideshow">
+              {images.map((src, index) => (
+                <img key={index} src={src} alt={`Slide ${index}`} className="slide" />
+              ))}
+            </div>
+          )}
+          {headerContent}
         </header>
         <section className="py-12 bg-gray-200">
   <div className="container mx-auto">
@@ -51,9 +82,9 @@ const Testimonials = React.lazy(() => import('../components/Testimonials'));
 <hr className="border-t border-gray-300" />
 
         <section className="py-12 " id='testimonials'>
-         
-            <Testimonials />
-          
+        <Suspense fallback={<div>Loading...</div>}>
+          <Testimonials />
+        </Suspense>
         </section>
         <PackagesSection />
         <Elopements />
