@@ -81,7 +81,7 @@ function Home({ openNavigation }) {
           {headerContent}
         </header>
 
-        <section className="py-12 bg-gray-200">
+       {/*  <section className="py-12 bg-gray-200">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="flex flex-col items-center justify-center md:col-span-1 lg:col-span-1">
@@ -100,7 +100,7 @@ function Home({ openNavigation }) {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <hr className="border-t border-gray-300" />
 
