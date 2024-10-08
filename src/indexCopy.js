@@ -1,14 +1,18 @@
 
 export const navigation = [
   {
+
+    /* Titles - About, Portfolio, Packages, elopements,  Testimonials 
+Portfolio instead of testimonials 
+ */
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "About",
+    url: "#About",
   },
   {
     id: "1",
-    title: "Testimonials",
-    url: "#testimonials",
+    title: "Portfolio",
+    url: "#Portfolio",
   },
   {
     id: "2",
@@ -18,13 +22,12 @@ export const navigation = [
   {
     id: "3",
     title: "Elopements",
-    url: "#roadmap",
+    url: "#Elopements",
   },
   {
     id: "4",
-    title: "Youtube",
-    url: "#youtube",
-    onlyMobile: true,
+    title: "Testimonials",
+    url: "#Testimonials",
   },
   {
     id: "5",
