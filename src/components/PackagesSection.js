@@ -4,7 +4,7 @@ import { Camera, Video, Mic, Speech, Users, Clock, Film, Gift, Clapperboard, Per
 const packages = [
   {
     id: 1,
-    title: 'Basic',
+    title: 'Bronze',
     description: 'Perfect for couples who want to capture the essence of their day',
     price: '€1,500',
     features: [
@@ -23,7 +23,7 @@ const packages = [
   },
   {
     id: 2,
-    title: 'Exclusive',
+    title: 'Silver',
     description: 'For those who want a more comprehensive coverage of their special day',
     price: '€2,250',
     features: [
@@ -108,19 +108,7 @@ const PackageCard = ({ pkg, onLearnMore }) => (
             </span>
             {feature}
 
-                      {/* Bride and Groom Preparations
-          Guests arriving
-          Reception
-          Speeches
-          First Dance
-          Dancing
-          Drone Footage
-          First Look - 1 Minute (within 48 hours)
-          Highlight Film (3-4 Minutes)
-          2 Videographers
-          Cinematic Feature Film (18-23 minutes)
-          Full Speeches
-          Full Ceremony */}
+                      
           </li>
         ))}
       </ul>
@@ -169,8 +157,8 @@ const PackageSection = () => {
               <PackageCard key={pkg.id} pkg={pkg} onLearnMore={setSelectedPackage} />
             ))}
           </div>
-          <h3 className="text-3xl font-serif text-center mb-4">Package Comparison</h3>
-          <PackageComparison />
+         {/*  <h3 className="text-3xl font-serif text-center mb-4">Package Comparison</h3>
+          <PackageComparison /> */}
           {selectedPackage && (
             <PackageModal
               isOpen={!!selectedPackage}
