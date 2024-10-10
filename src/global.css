@@ -21,12 +21,24 @@
     --color-800: #3a3f52;
     --color-900: #343846;
     --color-950: #292b38;
+
+    --olivine-50: #f2f9ec;
+    --olivine-100: #e2f1d6;
+    --olivine-200: #c7e4b2;
+    --olivine-300: #a4d185;
+    --olivine-400: #93c572;
+    --olivine-500: #65a240;
+    --olivine-600: #4d8030;
+    --olivine-700: #3d6328;
+    --olivine-800: #344f25;
+    --olivine-900: #2e4423;
+    --olivine-950: #15240f;
   }
   
   body {
     font-family: 'Nunito', sans-serif;
-    color: var(--color-950);
-    background-color: var(--color-200);
+    color: var(--color-charcoal-grey);
+    background-color: var(--olivine-300);
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -34,7 +46,7 @@
   }
   
   h2 {
-    color: var(--color-950);
+    color: var(--color-charcoal-grey);
   }
   
   p, .subheading {
@@ -43,11 +55,11 @@
   
   button, .button, a {
     font-family: 'Raleway', sans-serif;
-    color: var(--color-950);
+    color: var(--color-charcoal-grey);
   }
   
   button, .button {
-    background-color: var(--color-300);
+    background-color: var(--olivine-300);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -55,17 +67,91 @@
   }
   
   button:hover, .button:hover {
-    background-color: var(--color-400);
+    background-color: var(--olivine-400);
   }
   
   .section-divider {
-    background-color: var(--color-950);
+    background-color: var(--olivine-300);
     height: 2px;
     margin: 20px 0;
   }
   
   .testimonial-section, .elopement-section {
-    background-color: var(--color-950);
+    background-color: var(--olivine-500);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .header-blurred {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and opacity as needed */
+  }
+  
+  .header-solid {
+    background-color: rgba(255, 255, 255, 1); /* Solid background color */
+  }
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+  }
+  
+  .slide.active {
+    opacity: 1; /* Show the active slide */
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-charcoal-grey);
+    background-color: var(--olivine-100);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  h2 {
+    color: var(--color-charcoal-grey);
+  }
+  
+  p, .subheading {
+    font-family: 'Lora', serif;
+  }
+  
+  button, .button, a {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-charcoal-grey);
+  }
+  
+  button, .button {
+    background-color: var(--olivine-100);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover, .button:hover {
+    background-color: var(--olivine-100);
+  }
+  
+  .section-divider {
+    background-color: var(--color-charcoal-grey);
+    height: 2px;
+    margin: 20px 0;
+  }
+  
+  .testimonial-section, .elopement-section {
+    background-color: var(--olivine-300);
     padding: 20px;
     border-radius: 10px;
   }

@@ -47,11 +47,6 @@ const Elopements = () => {
     },
   ];
 
-  const testimonials = [
-    { name: 'Sarah & John', text: 'Our elopement video was absolutely magical!' },
-    { name: 'Emily & Mike', text: 'Captured our special day perfectly in the Irish landscape.' },
-    { name: 'Gavin & Ronan', text: 'The most amazing experience we could ever ask for' },
-  ];
 
   const settings = {
     dots: false,
@@ -99,7 +94,7 @@ const Elopements = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className=" min-h-screen">
       {/* Elopement Section */}
       <section id="elopement" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -124,24 +119,9 @@ const Elopements = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 bg-gray-200 w-full ">
-        <div className="w-full ">
-          <h2 className="text-4xl font-bold mb-8 text-center">What Couples Say</h2>
-          <Slider {...settings}>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="px-4 pt-4 pb-8">
-                <div className="bg-white p-9 rounded-lg shadow-xl max-w-xl md:min-h-52 lg:min-h-40">
-                  <p className="text-lg mb-4">"{testimonial.text}"</p>
-                  <p className="font-semibold fixed">- {testimonial.name}</p>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section>
+      
 
-      <section className="py-12 bg-gray-200 flex justify-center">
+      <section className="py-12 flex justify-center">
   <div className="container mx-auto text-center">
     <h2 className="text-4xl font-bold mb-8">Need some Inspiration?</h2>
     <p className="text-lg mb-12">

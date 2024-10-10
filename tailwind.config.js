@@ -29,8 +29,21 @@ module.exports = {
         'color-800': '#3a3f52',
         'color-900': '#343846',
         'color-950': '#292b38',
+        'olivine-50': '#f2f9ec',
+        'olivine-100': '#e2f1d6',
+        'olivine-200': '#c7e4b2',
+        'olivine-300': '#a4d185',
+        'olivine-400': '#93c572',
+        'olivine-500': '#65a240',
+        'olivine-600': '#4d8030',
+        'olivine-700': '#3d6328',
+        'olivine-800': '#344f25',
+        'olivine-900': '#2e4423',
+        'olivine-950': '#15240f',
 
       },
+
+    
 
   },
   plugins: [ function ({ addUtilities }) {

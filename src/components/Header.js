@@ -50,7 +50,7 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm border-b lg:backdrop-blur-sm  transition-colors duration-300 ${isScrolled ? 'bg-color-600 shadow-lg z-50' : ' backdrop-blur-sm text-white'} ${openNavigation ? '' : ' backdrop-blur-sm'}`}>
+    <div className={`fixed top-0 left-0 w-full z-50 border-b backdrop-blur-sm lg:backdrop-blur-sm  transition-colors duration-300 ${isScrolled ? 'bg-white shadow-xl z-50 ' : ' backdrop-blur-sm '} ${openNavigation ? '' : ' backdrop-blur-sm'}`}>
      {/*      transition-colors duration-300 ${isScrolled ? 'bg-white text-black shadow-lg' : ' backdrop-blur-sm text-white'}`}>
  */}
      
@@ -58,21 +58,25 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
         <a className="block w-[8rem] xl:mr-8">
           <img src="/Media/dronan_media_logo_copy.svg" alt="DronanMediaLogo" className="" />
         </a>
-        <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[8rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row pt-4">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                className={`block relative text-2xl uppercase text-n-1 transition-colors hover:text-color-1/50 hover:bg-white  ${
-                  item.onlyMobile ? 'lg:hidden' : ''
-                } px-6 py-6 md:py-6 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash ? 'z-2 lg:text-n-1' : 'lg:text-n-1/40'
-                } lg:leading-5 lg:hover:text-neutral-950 xl:px-12 rounded-md`}
-              >
-                {item.title}
-              </a>
-            ))}
+                <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[8rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
+                  <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row pt-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.id}
+                        href={item.url}
+                        className={`block relative text-2xl uppercase transition-colors ${
+                          isScrolled
+                            ? '  hover:bg-olivine-200 hover:shadow-lg '
+                            : 'text-white text-opacity-50 hover:bg-white hover:text-olivine-950'
+                        } ${
+                          item.onlyMobile ? 'lg:hidden' : ''
+                        } px-6 py-6 md:py-6 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                          item.url === pathname.hash ? 'z-2 ' : ''
+                        } lg:leading-5 xl:px-12 rounded-md`}
+                      >
+                        {item.title}
+                      </a>
+                    ))}
           </div>
           <HamburgerMenu />
         </nav>
