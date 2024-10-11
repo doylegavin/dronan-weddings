@@ -5,6 +5,8 @@ import Elopements from '../components/Elopement';
 import Footer from '../components/Footer';
 import ContactButton from '../components/ContactButton';
 import TestimonialSlider from '../components/TestimonialSlider';
+import About from '../components/About';
+import Contact from '../components/Contact';
 
 const Testimonials = React.lazy(() => import('../components/Testimonials'));
 
@@ -113,8 +115,13 @@ function Home({ openNavigation }) {
 
         <PackagesSection />
         <TestimonialSlider />
-        <Elopements />
+
+{/* About section */}
+
+       {/*  <Elopements /> */}
       </div>
+      <About />
+      <Contact />
       <div>
         <ContactButton />
       </div>

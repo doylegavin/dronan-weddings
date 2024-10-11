@@ -55,7 +55,7 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
  */}
      
       <div className="flex items-center px-5 px-7.5 xl:px-10 ">
-        <a className="block w-[8rem] xl:mr-8">
+        <a className="block w-[8rem] xl:mr-8" href='home'>
           <img src="/Media/dronan_media_logo_copy.svg" alt="DronanMediaLogo" className="" />
         </a>
                 <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[8rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
@@ -77,6 +77,39 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                         {item.title}
                       </a>
                     ))}
+
+                    {/*   {navigation.map((item) => (
+                              <div key={item.id} className="px-6 py-6 md:py-6 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 xl:px-12 rounded-md">
+                                {item.url.startsWith('#') ? (
+                                  <a
+                                    href={item.url}
+                                    className={`block relative text-2xl uppercase transition-colors ${
+                                      isScrolled
+                                        ? 'bg-olivine-500 text-white hover:bg-olivine-700 hover:text-olivine-950'
+                                        : 'text-white text-opacity-50 hover:bg-white hover:text-olivine-950'
+                                    } ${item.onlyMobile ? 'lg:hidden' : ''} ${
+                                      item.url === pathname.hash ? 'z-2' : ''
+                                    }`}
+                                  >
+                                    {item.title}
+                                  </a>
+                                ) : (
+                                  <Link
+                                    to={item.url}
+                                    className={`block relative text-2xl uppercase transition-colors ${
+                                      isScrolled
+                                        ? 'bg-olivine-500 text-white hover:bg-olivine-700 hover:text-olivine-950'
+                                        : 'text-white text-opacity-50 hover:bg-white hover:text-olivine-950'
+                                    } ${item.onlyMobile ? 'lg:hidden' : ''} ${
+                                      item.url === pathname.hash ? 'z-2' : ''
+                                    }`}
+                                  >
+                                    {item.title}
+                                  </Link>
+                                )}
+                              </div>
+                            ))}
+                    ))} */}
           </div>
           <HamburgerMenu />
         </nav>

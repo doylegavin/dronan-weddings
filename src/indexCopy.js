@@ -1,38 +1,35 @@
 
 export const navigation = [
+ 
   {
-
-    /* Titles - About, Portfolio, Packages, elopements,  Testimonials 
-Portfolio instead of testimonials 
- */
     id: "0",
-    title: "About",
-    url: "#About",
+    title: "Portfolio",
+    url: "/portfolio",
   },
   {
     id: "1",
-    title: "Portfolio",
-    url: "#Portfolio",
-  },
-  {
-    id: "2",
     title: "Packages",
     url: "#Packages",
   },
   {
-    id: "3",
+    id: "2",
     title: "Elopements",
     url: "#Elopements",
   },
   {
-    id: "4",
+    id: "3",
     title: "Testimonials",
     url: "#Testimonials",
   },
   {
+    id: "4",
+    title: "About",
+    url: "/about",
+  },
+  {
     id: "5",
     title: "Contact",
-    url: "#contact",
+    url: "/contact",
     onlyMobile: true,
   },
 ];
