@@ -10,11 +10,11 @@ const testimonials = [
     image: '/Media/Stills/MAC2.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://www.youtube.com/embed/VIDEO_ID_1',
-      'https://www.youtube.com/embed/VIDEO_ID_2',
-      'https://www.youtube.com/embed/VIDEO_ID_3'
+      'https://youtu.be/irmetMwmnio',
+      'https://youtu.be/UIF6_Wnq8ac',
+      'https://youtu.be/-BuLMCDLyug'
     ],
-    text: 'Ronan captured our wedding perfectly!',
+    text: 'Ronan captured our wedding perfectly! \n - Laoise & Kyle',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -22,11 +22,10 @@ const testimonials = [
     image: '/Media/Stills/MAC3.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://www.youtube.com/embed/VIDEO_ID_1',
-      'https://www.youtube.com/embed/VIDEO_ID_2',
-      'https://www.youtube.com/embed/VIDEO_ID_3'
+      'https://youtu.be/MvQnf89Ds5o',
+      'https://youtu.be/Azh2jhesD8c',
     ],
-    text: 'Ronan captured our wedding perfectly!',
+    text: 'Ronan captured our wedding perfectly! \n - Martin & Eilis',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -34,11 +33,10 @@ const testimonials = [
     image: '/Media/Stills/MAC4.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://www.youtube.com/embed/VIDEO_ID_1',
-      'https://www.youtube.com/embed/VIDEO_ID_2',
-      'https://www.youtube.com/embed/VIDEO_ID_3'
+      'https://youtu.be/wrhNsJ206jM',
+      'https://youtu.be/DAmfFkMQ4Fg',
     ],
-    text: 'Ronan captured our wedding perfectly!',
+    text: 'Ronan captured our wedding perfectly! \n - Aisling & James',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -46,11 +44,9 @@ const testimonials = [
     image: '/Media/Stills/MAC5.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://www.youtube.com/embed/VIDEO_ID_1',
-      'https://www.youtube.com/embed/VIDEO_ID_2',
-      'https://www.youtube.com/embed/VIDEO_ID_3'
+      'https://youtu.be/x9tO0AQNCt0'
     ],
-    text: 'Ronan captured our wedding perfectly!',
+    text: 'Ronan captured our wedding perfectly! \n - Patrick & Karmel',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -58,11 +54,9 @@ const testimonials = [
     image: '/Media/Stills/MAC6.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://www.youtube.com/embed/VIDEO_ID_1',
-      'https://www.youtube.com/embed/VIDEO_ID_2',
-      'https://www.youtube.com/embed/VIDEO_ID_3'
+      'https://youtu.be/s6qRvsZPZfc'
     ],
-    text: 'Ronan captured our wedding perfectly!',
+    text: 'Ronan captured our wedding perfectly! \n - Amy & Kevin',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -70,11 +64,9 @@ const testimonials = [
     image: '/Media/Stills/MAC7.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://www.youtube.com/embed/VIDEO_ID_1',
-      'https://www.youtube.com/embed/VIDEO_ID_2',
-      'https://www.youtube.com/embed/VIDEO_ID_3'
+      'https://youtu.be/_qEN29QCrwg'
     ],
-    text: 'Ronan captured our wedding perfectly!',
+    text: 'Ronan captured our wedding perfectly! \n - Brendan and Ruth',
     galleryLink: '/gallery/wedding1',
   },
 ];
@@ -126,7 +118,7 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
                 loading="lazy"
               />
               <div
-                className="absolute max-w-md inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-50 opacity-0 group-hover:opacity-100  group-hover:scale-105 transition-opacity"
+                className="absolute max-w-md  flex inset-0 items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-50 opacity-0 group-hover:opacity-100  group-hover:scale-105 transition-opacity text-center"
                 style={{ clipPath: 'url(#benefits)' }}
               >
                 {testimonial.text}
