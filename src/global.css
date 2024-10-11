@@ -1,4 +1,5 @@
 /* global.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
 :root {
     --color-blush-pink: #F4C7C3;
@@ -36,7 +37,7 @@
   }
   
   body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-charcoal-grey);
     background-color: var(--olivine-300);
   }
@@ -50,11 +51,11 @@
   }
   
   p, .subheading {
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
   }
   
   button, .button, a {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-charcoal-grey);
   }
   
@@ -110,7 +111,7 @@
   }
   
   body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-charcoal-grey);
     background-color: var(--olivine-100);
   }
@@ -124,11 +125,11 @@
   }
   
   p, .subheading {
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
   }
   
   button, .button, a {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-charcoal-grey);
   }
   
@@ -182,4 +183,5 @@
   .slide.active {
     opacity: 1; /* Show the active slide */
   }
+ 
   

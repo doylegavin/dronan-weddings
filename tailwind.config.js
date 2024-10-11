@@ -8,9 +8,8 @@ module.exports = {
         'pulse-slow': 'pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       fontFamily: {
-        sans: ['Lato', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
-        cursive: ['Great Vibes', 'cursive'],
       },
       colors: {
         'wedding-pink': '#FFC0CB',

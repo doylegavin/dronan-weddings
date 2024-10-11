@@ -70,8 +70,8 @@ const packages = [
 const PackageCard = ({ pkg, onLearnMore }) => (
     <div className="p-6 bg-olivine-100 rounded-lg shadow-lg flex flex-col h-full">
       <img src={pkg.image} alt={pkg.title} className="w-full h-40 object-cover rounded-lg mb-4" />
-      <h3 className="text-2xl font-serif mb-2">{pkg.title}</h3>
-      <p className="mb-4 flex-grow font-sans">{pkg.description}</p>
+      <h3 className="text-2xl  mb-2">{pkg.title}</h3>
+      <p className="mb-4 flex-grow ">{pkg.description}</p>
       {/* <p className="text-lg font-bold mb-4 font-serif">{pkg.price}</p> */}
       <Button onClick={() => onLearnMore(pkg)} className="w-full py-2 bg-olivine-300 hover:bg-olivine-400">
         <span className="mr-2">Learn More</span>
@@ -82,7 +82,7 @@ const PackageCard = ({ pkg, onLearnMore }) => (
 
   const PackageModal = ({ isOpen, onClose, pkg }) => (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <h2 className="text-3xl font-serif mb-4">{pkg.title} Package</h2>
+      <h2 className="text-3xl mb-4">{pkg.title} Package</h2>
       <video className="w-full mb-4 rounded" controls autoPlay loop muted>
         <source src={pkg.video} type="video/mp4" />
         Your browser does not support the video tag.
@@ -112,7 +112,6 @@ const PackageCard = ({ pkg, onLearnMore }) => (
           </li>
         ))}
       </ul>
-      <p className="text-xl font-bold mb-4 font-serif">{pkg.price}</p>
       <Button onClick={onClose} className="w-full bg-olivine-500 hover:bg-olivine-600">Close</Button>
     </Modal>
   );
@@ -151,7 +150,7 @@ const PackageSection = () => {
     return (
       <section className="py-12 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-serif text-center mb-8">Our Wedding Packages</h2>
+          <h2 className="text-4xl text-center mb-8">Our Wedding Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {packages.map((pkg) => (
               <PackageCard key={pkg.id} pkg={pkg} onLearnMore={setSelectedPackage} />
