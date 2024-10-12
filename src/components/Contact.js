@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <section id="Contact" className="py-12 ">
-      <div className="container mx-auto">
+      <div className="container mx-auto p-4">
         <h2 className="text-3xl font-bold text-center mb-8">Contact Me</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
@@ -144,7 +144,7 @@ const Contact = () => {
             </select>
           </div>
           <div className="text-center">
-            <button type="submit" className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600">
+            <button type="submit" className="px-6 py-2 bg-olivine-500 text-white font-bold rounded-md hover:bg-olivine-600">
               Submit
             </button>
           </div>

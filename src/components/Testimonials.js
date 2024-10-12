@@ -100,11 +100,11 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
         <div className="container mx-auto justify-center">
           <h2 className="text-3xl font-semibold text-center mb-8">Portfolio</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 justify-center">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="relative group mx-auto w-9/10"
+              className="relative group mx-auto"
               onMouseEnter={() => setHovered(testimonial.id)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => setSelectedTestimonial(testimonial)}
