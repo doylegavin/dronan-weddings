@@ -50,7 +50,7 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-50 border-b backdrop-blur-sm lg:backdrop-blur-sm  transition-colors duration-300 ${isScrolled ? 'bg-white shadow-xl z-50 ' : ' backdrop-blur-sm '} ${openNavigation ? '' : ' backdrop-blur-sm'}`}>
+    <div className={`fixed top-0 left-0 w-full z-50 border-b transition-colors duration-300 bg-white shadow-xl  ${openNavigation ? 'bg-transparent' : ' '}`}>
      {/*      transition-colors duration-300 ${isScrolled ? 'bg-white text-black shadow-lg' : ' backdrop-blur-sm text-white'}`}>
  */}
      
@@ -64,13 +64,13 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                       <a
                         key={item.id}
                         href={item.url}
-                        className={`block relative text-2xl uppercase transition-colors ${
-                          isScrolled
-                            ? '  hover:bg-olivine-200 hover:shadow-lg '
-                            : 'text-white text-opacity-50 hover:bg-white hover:text-olivine-950'
-                        } ${
+                        className={`block relative text-2xl uppercase transition-colors 
+                               hover:bg-olivine-200 hover:shadow-lg 
+                             text-olivine-950 hover:text-white text-opacity-50 
+                             ${openNavigation ? 'bg-white hover:bg-olivine-200 hover:text-white' : ''}
+                         ${
                           item.onlyMobile ? 'lg:hidden' : ''
-                        } px-6 py-6 md:py-6 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                        } px-6 py-4 md:py-4 my-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                           item.url === pathname.hash ? 'z-2 ' : ''
                         } lg:leading-5 xl:px-12 rounded-md`}
                       >
