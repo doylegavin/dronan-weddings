@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="py-12 bg-white" id="About">
+    <section className="py-12 bg-white" id="about">
       <div className="container mx-auto text-center">
         <img src='/Media/Stills/Dronan.jpg' alt='Dronan' className='rounded-3xl w-1/2 h-auto mx-auto object-cover' />
         <h1 className="text-3xl font-bold mt-8">About Me</h1>

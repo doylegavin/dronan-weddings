@@ -4,7 +4,7 @@ export const navigation = [
   {
     id: "0",
     title: "Portfolio",
-    url: "/portfolio",
+    url: "#portfolio",
   },
   {
     id: "1",
@@ -24,12 +24,12 @@ export const navigation = [
   {
     id: "4",
     title: "About",
-    url: "/about",
+    url: "#about",
   },
   {
     id: "5",
     title: "Contact",
-    url: "/contact",
+    url: "#contact",
     onlyMobile: true,
   },
 ];

@@ -59,10 +59,13 @@ function Home({ openNavigation }) {
 
   return (
     <>
-      <div className="overflow-hidden">
+      <section id="home" >
+      <div className="overflow-hidden" >
         {/* Header is now rendered in App.js, not here */}
       </div>
+      </section>
       <div>
+        
         <header className="relative w-full h-screen overflow-hidden">
           {canAutoplay ? (
             <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
@@ -107,23 +110,26 @@ function Home({ openNavigation }) {
 
         <hr className="border-t border-gray-300" />
 
-        <section className="py-12" id="testimonials">
+        <section className="py-12" id="portfolio">
           <Suspense fallback={<div>Loading...</div>}>
             <Testimonials />
           </Suspense>
         </section>
-
-        <PackagesSection />
-        <TestimonialSlider />
-
+   <section id="packages">
+        <PackagesSection  />
+        </section>
+        <section id="testimonials">
+        <TestimonialSlider  />
+        </section>
 {/* About section */}
 
        {/*  <Elopements /> */}
       </div>
-      <About />
-      <Contact />
+      <section id="about" ><About  /></section>
+      <section id="contact" ><Contact  /></section>
+    
       <div>
-        <ContactButton />
+        <ContactButton  />
       </div>
       <div><Footer /></div>
     </>
