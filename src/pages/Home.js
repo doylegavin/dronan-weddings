@@ -12,11 +12,23 @@ import Testimonials from '../components/Testimonials';
 const Portfolio = React.lazy(() => import('../components/Portfolio'));
 
 const images = [
-  '/Media/Stills/MAC3.jpg',
-  '/Media/Stills/MAC4.jpg',
-  '/Media/Stills/MAC5.jpg',
-  '/Media/Stills/MAC6.jpg',
-  '/Media/Stills/MAC7.jpg',
+  '/Media//LandingPage/LandingPage1.jpg',
+  '/Media//LandingPage/LandingPage2.jpg',
+  '/Media//LandingPage/LandingPage3.jpg',
+  '/Media//LandingPage/LandingPage4.jpg',
+  '/Media//LandingPage/LandingPage5.jpg',
+  '/Media//LandingPage/LandingPage6.jpg',
+  '/Media//LandingPage/LandingPage7.jpg',
+  '/Media//LandingPage/LandingPage8.jpg',
+  '/Media//LandingPage/LandingPage9.jpg',
+  '/Media//LandingPage/LandingPage10.jpg',
+  '/Media//LandingPage/LandingPage11.jpg',
+  '/Media//LandingPage/LandingPage12.jpg',
+  '/Media//LandingPage/LandingPage13.jpg',
+  '/Media//LandingPage/LandingPage14.jpg',
+  '/Media//LandingPage/LandingPage15.jpg',
+  '/Media//LandingPage/LandingPage16.jpg',
+  '/Media//LandingPage/LandingPage17.jpg',
   
 ];
 
