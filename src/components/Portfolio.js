@@ -1,10 +1,10 @@
-// src/components/Testimonials.js
+// src/components/Portfolio.js
 import React, { useState } from 'react';
 import ClipPath from './ClipPath';
 import { Modal, Button } from './UIComponents';
 
 
-const testimonials = [
+const portfolio = [
   {
     id: 1,
     image: '/Media/Stills/MAC2.jpg',
@@ -91,7 +91,7 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
   </Modal>
 );
 
-  function Testimonials() {
+  function Portfolio() {
     const [hovered, setHovered] = useState(null);
     const [selectedTestimonial, setSelectedTestimonial] = useState(null);
   
@@ -101,7 +101,7 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
           <h2 className="text-3xl font-semibold text-center mb-8">Portfolio</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 justify-center">
-          {testimonials.map((testimonial) => (
+          {portfolio.map((testimonial) => (
             <div
               key={testimonial.id}
               className="relative group mx-auto"
@@ -137,4 +137,4 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
     );
   }
 
-export default Testimonials;
+export default Portfolio;

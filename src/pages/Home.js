@@ -8,7 +8,7 @@ import TestimonialSlider from '../components/TestimonialSlider';
 import About from '../components/About';
 import Contact from '../components/Contact';
 
-const Testimonials = React.lazy(() => import('../components/Testimonials'));
+const Portfolio = React.lazy(() => import('../components/Portfolio'));
 
 const images = [
   '/Media/Stills/MAC3.jpg',
@@ -46,13 +46,11 @@ function Home({ openNavigation }) {
 
   const headerContent = useMemo(() => (
     <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50">
-      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white text-5xl md:text-7xl font-bold`}>
-        Dronan Videography
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white text-5xl md:text-6xl font-sans`}>
+        Weddings by Dronan Media
       </h1>
       <br />
-      <p className={`${openNavigation ? 'hidden' : 'block'} text-white font-bold`}>
-        Making weddings simple
-      </p>
+      
       <br />
     </div>
   ), [openNavigation]);
@@ -112,7 +110,7 @@ function Home({ openNavigation }) {
 
         <section className="py-12" id="portfolio">
           <Suspense fallback={<div>Loading...</div>}>
-            <Testimonials />
+            <Portfolio />
           </Suspense>
         </section>
    <section id="packages">
