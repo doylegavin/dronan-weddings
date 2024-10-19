@@ -47,7 +47,7 @@ function Home({ openNavigation }) {
 
   const headerContent = useMemo(() => (
     <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50">
-      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white text-5xl md:text-6xl font-sans`}>
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-sans `}>
         Weddings by Dronan Media
       </h1>
       <br />
@@ -129,7 +129,7 @@ function Home({ openNavigation }) {
       <section id="contact" ><Contact  /></section>
     
       <div>
-        <ContactButton  />
+      {!openNavigation && <ContactButton />}
       </div>
       <div><Footer /></div>
     </>
