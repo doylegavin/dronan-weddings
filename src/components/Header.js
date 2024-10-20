@@ -67,10 +67,10 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                         className={`block relative text-2xl uppercase transition-colors 
                                hover:bg-olivine-200 hover:shadow-lg 
                              text-olivine-950 hover:text-white text-opacity-50 
-                             ${openNavigation ? 'bg-white hover:bg-olivine-200 hover:text-white' : ''}
+                             ${openNavigation ? 'bg-white hover:bg-olivine-200 hover:text-white py-4' : ''}
                          ${
                           item.onlyMobile ? 'lg:hidden' : ''
-                        } px-6 py-4 md:py-4 my-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                        } px-6 py-4 md:py-6 my-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                           item.url === pathname.hash ? 'z-2 ' : ''
                         } lg:leading-5 xl:px-12 rounded-md`}
                       >
