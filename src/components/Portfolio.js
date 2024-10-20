@@ -10,11 +10,13 @@ const portfolio = [
     image: '/Media/Stills/MAC2.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://youtu.be/irmetMwmnio',
-      'https://youtu.be/UIF6_Wnq8ac',
-      'https://youtu.be/-BuLMCDLyug'
+      'https://www.youtube.com/embed/irmetMwmnio',
+      'https://www.youtube.com/embed/UIF6_Wnq8ac',
+      'https://www.youtube.com/embed/-BuLMCDLyug'
     ],
     text: 'Ronan captured our wedding perfectly! \n - Laoise & Kyle',
+    couple: 'Laoise & Kyle',
+    p: 'Ronan captured our wedding perfectly!',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -22,10 +24,12 @@ const portfolio = [
     image: '/Media/Stills/MAC3.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://youtu.be/MvQnf89Ds5o',
-      'https://youtu.be/Azh2jhesD8c',
+      'https://www.youtube.com/embed/MvQnf89Ds5o',
+      'https://www.youtube.com/embed/Azh2jhesD8c',
     ],
     text: 'Ronan captured our wedding perfectly! \n - Martin & Eilis',
+    couple: 'Martin & Eilis',
+    p: 'Ronan captured our wedding perfectly!',
     galleryLink: '/gallery/wedding1',
   },
   {
@@ -33,8 +37,8 @@ const portfolio = [
     image: '/Media/Stills/MAC4.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://youtu.be/wrhNsJ206jM',
-      'https://youtu.be/DAmfFkMQ4Fg',
+      'https://www.youtube.com/embed/wrhNsJ206jM',
+      'https://www.youtube.com/embed/DAmfFkMQ4Fg',
     ],
     text: 'Ronan captured our wedding perfectly! \n - Aisling & James',
     galleryLink: '/gallery/wedding1',
@@ -44,7 +48,7 @@ const portfolio = [
     image: '/Media/Stills/MAC5.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://youtu.be/x9tO0AQNCt0'
+      'https://www.youtube.com/embed/x9tO0AQNCt0'
     ],
     text: 'Ronan captured our wedding perfectly! \n - Patrick & Karmel',
     galleryLink: '/gallery/wedding1',
@@ -54,7 +58,7 @@ const portfolio = [
     image: '/Media/Stills/MAC6.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://youtu.be/s6qRvsZPZfc'
+      'https://www.youtube.com/embed/s6qRvsZPZfc'
     ],
     text: 'Ronan captured our wedding perfectly! \n - Amy & Kevin',
     galleryLink: '/gallery/wedding1',
@@ -64,7 +68,7 @@ const portfolio = [
     image: '/Media/Stills/MAC7.jpg',
     video: '/public/HomeVideo.mp4',
     videos: [
-      'https://youtu.be/_qEN29QCrwg'
+      'https://www.youtube.com/embed/_qEN29QCrwg'
     ],
     text: 'Ronan captured our wedding perfectly! \n - Brendan and Ruth',
     galleryLink: '/gallery/wedding1',
@@ -73,15 +77,18 @@ const portfolio = [
 
 const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
   <Modal isOpen={isOpen} onClose={onClose}>
-    <h2 className="text-3xl mb-4">{testimonial.text}</h2>
+    <h2 className="text-3xl mb-4">{testimonial.couple}</h2>
+    <p>{testimonial.p}</p>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
       {testimonial.videos.map((videoUrl, index) => (
         <div key={index} className="aspect-w-16 aspect-h-9">
           <iframe
             src={videoUrl}
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            title="YouTube video player"
             className="w-full h-full"
           ></iframe>
         </div>
