@@ -3,21 +3,21 @@ import React from "react";
 const testimonials = [
   {
     quote:
-      "We were lucky enough to have Stephen film our wedding day. He was amazing from start to finish and captured the day so beautifully. Absolutely loved every part of our video’s and would 100% recommend him. Thanks so much Stephen, you're amazing!",
-    author: "Jess & Tony",
-    image: "media/stills/MAC2.jpg",
+      "Videography was one of our high priorities for our wedding, keen to hold on to the special moments with our favourite people long after the day had passed. When researching who to hire, we were initially disillusioned by the many cookie cutter sample videos as they didn't fit our vision for the day or how we'd like to remember it. Then we found Dronan Media and instantly knew it was exactly what we were looking for, with personality beaming in all of their samples. Ronan was such a pleasure to deal with on the lead up, both full of suggestions and very open to ours. On the day itself, the team were so pleasant and full of happiness, constantly working away in the background. The final product is so much more than a video; the creative vision is nothing short of spectacular and the editing is painstakingly done to perfection. We couldn't be happier with our decision and would highly recommend it to others.",
+    author: "Aoife & Michael",
+    image: "Media/Testimonials/Testimonial1.jpg",
   },
   {
     quote:
-      "We can’t thank Stephen and Team enough for our amazing wedding videos. From the very first email, the guys were so friendly and professional and captured our day beautifully. The drone footage is breathtaking. Highly recommend Signature Media!",
-    author: "Emma & Shane",
-    image: "media/stills/MAC3.jpg",
+      "We chose Dronan Media to capture our wedding day in Galway and Clare. Ronan was quick to respond and put us right at ease in our first conversation. Ronan understood how important it was for us to have fun and enjoy our day. He was so laid back on the day we hardly even noticed he was there! For any camera shy brides or grooms, this would definitely help ease any nerves. Ronan delivered a beautifully crafted first look film (~1 min), highlight film (~5 min) and cinematic feature film. I honestly couldn’t recommend him enough before we saw any of the videos, but now that I’ve seen them I’m completely speechless. Ronan captures the essence of the day perfectly.  His talent is undeniable in not only the way that he manages to capture every emotional moment and incorporate the scenery with his drone but also in his ability to extrapolate the best parts into a wonderful story. Truly a work of art. My husband and I were beyond thrilled with the videos and I love looking back at them reminiscing on the day. Wedding photographs are one thing, but videos do really capture the magic of it all and bring you back in time. I've followed Ronan’s work on Instagram for the past couple of years since we booked him for our wedding, and his work gets better and better- I love how each wedding edit is so different and unique to the couple, which is something very special! I'd highly recommend Dronan Media to any engaged couple looking for a talented videographer. A sound, friendly and unassuming guy that is there to do his job without any fuss or messing around. You won't be disappointed..and this is coming from someone that sets pretty high expectations. Thanks a million Ronan for keeping our wedding memories alive through video! ♥️",
+    author: "Orla & Niall",
+    image: "Media/Testimonials/Testimonial2.jpg",
   },
   {
     quote:
-      "We can’t thank Stephen and Team enough for our amazing wedding videos. From the very first email, the guys were so friendly and professional and captured our day beautifully. The drone footage is breathtaking. Highly recommend Signature Media!",
-    author: "Emma & Shane",
-    image: "media/stills/MAC4.jpg",
+      "Myself & my wife Eilís could not recommend Ronan & his team highly enough. From our first meeting he was the epitome of professionalism & quality.  He was able to put us at ease with his knowledge straight away and answered any & all questions we had about logistics for the wedding day. On the day itself Ronan & team were asked discreet as could be but got every single video that we were looking for. We were absolutely blown away by the 2-minute promo video we received - the edits were unbelievable and we wore it out with the amount of times we watched it! The final element that we were so thankful for was the feature length piece which was put together exceptionally well. We couldn't have asked for any more from the experience with Ronan & would recommend him for anyone looking to hire a videographer for their big day.",
+    author: "Martin & Eilís",
+    image: "Media/Testimonials/Testimonial3.png",
   },
   // Add more testimonials as needed
 ];
