@@ -66,8 +66,8 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                         href={item.url}
                         className={`block relative text-2xl uppercase transition-colors 
                                hover:bg-olivine-200 hover:shadow-lg 
-                             text-olivine-950 hover:text-white text-opacity-50 
-                             ${openNavigation ? 'bg-white hover:bg-olivine-200 hover:text-white py-4' : ''}
+                             text-olivine-950 hover:text-white  
+                             ${openNavigation ? ' text-white bg-olivine-200 bg-opacity-50 hover:bg-olivine-200 hover:text-white py-4' : ''}
                          ${
                           item.onlyMobile ? 'lg:hidden' : ''
                         } px-6 py-4 md:py-6 my-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
