@@ -11,24 +11,58 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
   const pathname = useLocation();
   const lastScrollPosition = useRef(0);
 
-  const toggleNavigation = () => {
+  const toggleNavigation = (e) => {
     if (openNavigation) {
       setOpenNavigation(false);
       enablePageScroll();
-      // Restore the last scroll position
-      setTimeout(() => {
-        window.scrollTo(0, lastScrollPosition.current);
-      }, 0);
+      
+      if (e && e.target.tagName === 'A') {
+        // If a navigation link was clicked
+        setTimeout(() => {
+          const targetId = e.target.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerHeight = document.querySelector('.fixed').offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            
+            // Check if we're scrolling down or up
+            if (offsetPosition > window.pageYOffset) {
+              // Scrolling down - use smooth
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            } else {
+              // Scrolling up - use instant
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'instant'
+              });
+            }
+          }
+        }, 100);
+      } else {
+        // If closing via menu button, return to last position instantly
+        setTimeout(() => {
+          window.scrollTo({
+            top: lastScrollPosition.current,
+            behavior: 'instant'
+          });
+        }, 100);
+      }
     } else {
-      // Save the current scroll position
+      // Save current position before opening navigation
       lastScrollPosition.current = window.pageYOffset;
       setOpenNavigation(true);
       disablePageScroll();
-      // Scroll to the top of the page
-      window.scrollTo(0, 0);
+      // Scroll to top instantly when opening navigation
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
     }
   };
-
   useEffect(() => {
     // Clean up function to re-enable scrolling when component unmounts
     return () => {
@@ -73,8 +107,10 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                         } px-6 py-4 md:py-6 my-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                           item.url === pathname.hash ? 'z-2 ' : ''
                         } lg:leading-5 xl:px-12 rounded-md`}
+                        onClick={toggleNavigation}
                       >
                         {item.title}
+                        
                       </a>
                     ))}
 
