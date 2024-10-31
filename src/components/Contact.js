@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser'; // Update the import if you're using the newer version
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,17 +21,32 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // Replace the handleSubmit function with this:
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  // Initialize EmailJS with your public key
+  emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY); // Get this from your EmailJS dashboard
 
-    emailjs.send(
-      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-      formData,
-      'YOUR_USER_ID' // Replace with your EmailJS user ID
-    ).then((response) => {
-      alert('Your contact has been submitted!');
-      window.scrollTo(0, 0);
+  emailjs.send(
+    process.env.REACT_APP_EMAILJS_SERVICE_ID, // Get this from EmailJS - it's your service ID
+    process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Get this from EmailJS - it's your template ID
+    {
+      from_name: formData.name,
+      to_name: "Your Name", // The website owner's name
+      from_email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      wedding_date: formData.date,
+      wedding_location: formData.location,
+      hear_about_us: formData.hearAboutUs,
+      reply_to: formData.email,
+    }
+  ).then(
+    (response) => {
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Thank you for your message! We'll get back to you soon.");
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -40,11 +56,13 @@ const Contact = () => {
         location: '',
         hearAboutUs: ''
       });
-    }).catch((error) => {
-      console.error('Failed to send email:', error);
-      alert('Failed to send your contact. Please try again later.');
-    });
-  };
+    },
+    (error) => {
+      console.log("FAILED...", error);
+      alert("Oops! Something went wrong. Please try again later.");
+    }
+  );
+};
 
   return (
     <section id="contact" className="py-12 ">
