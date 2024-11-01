@@ -18,7 +18,7 @@ const packages = [
       'First Look - 1 Minute (within 48 hours)',
       'Highlight Film (3-4 Minutes)'
     ],
-    image: '/Media/Stills/MAC9.jpg',
+    image: '/Media/LandingPage/LandingPage8.jpg',
     video: '/Media/Videos/BrendanandRuth(FirstLook).mp4'
   },
   {
@@ -38,7 +38,7 @@ const packages = [
         'Highlight Film (3-4 Minutes)',
       'Cinematic Feature Film (18-23 minutes)'
     ],
-    image: '/Media/Stills/MAC2.jpg',
+    image: '/Media/LandingPage/LandingPage5.jpg',
     video: '/Media/Videos/BrendanandRuth(FirstLook).mp4'
   },
   {
@@ -61,7 +61,7 @@ const packages = [
       'Full Speeches',
       'Full Ceremony'
     ],
-    image: '/Media/Stills/MAC3.jpg',
+    image: '/Media/LandingPage/LandingPage6.jpg',
     video: '/Media/Videos/BrendanandRuth(FirstLook).mp4'
   }
 ];

@@ -58,9 +58,9 @@ function Home({ openNavigation }) {
   }, []);
 
   const headerContent = useMemo(() => (
-    <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50">
-      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-sans pb-10 `}>
-        Weddings by Dronan Media 
+    <div className="relative z-10 flex flex-col items-center justify-center w-full h-full  ">
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-thin font-sans pb-10  `}>
+        DRONAN WEDDINGS 
       </h1>
       <br />
       

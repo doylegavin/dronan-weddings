@@ -118,7 +118,7 @@ const handleSubmit = (e) => {
             ></textarea>
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="date"> Wedding Date</label>
+            <label className="block text-lg font-medium mb-2" htmlFor="date"> Date</label>
             <input
               type="date"
               id="date"
@@ -130,7 +130,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="location"> Wedding Location</label>
+            <label className="block text-lg font-medium mb-2" htmlFor="location"> Location</label>
             <input
               type="text"
               id="location"

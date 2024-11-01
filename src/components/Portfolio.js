@@ -102,7 +102,7 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
         <div key={index} className="flex flex-col gap-2">
           <h3 className="text-2xl font-serif">
             {index === 0 && "First Look"}
-            {index === 1 && "Highlights"}
+            {index === 1 && "Highlight"}
             {index === 2 && "Feature Film"}
           </h3>
           <div className="aspect-w-16 aspect-h-9">
