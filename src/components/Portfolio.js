@@ -7,94 +7,122 @@ import { Modal, Button } from './UIComponents';
 const portfolio = [
   {
     id: 1,
-    image: '/Media/Stills/MAC2.jpg',
-    video: '/public/HomeVideo.mp4',
+    image: '/Media/PortfolioImages/LaoiseandKyle.jpg',
     videos: [
       'https://www.youtube.com/embed/irmetMwmnio',
       'https://www.youtube.com/embed/UIF6_Wnq8ac',
       'https://www.youtube.com/embed/-BuLMCDLyug'
     ],
-    text: 'Ronan captured our wedding perfectly! \n - Laoise & Kyle',
-    couple: 'Laoise & Kyle',
+    firstLook: 'https://www.youtube.com/embed/irmetMwmnio',
+    highlights: 'https://www.youtube.com/embed/UIF6_Wnq8ac',
+    featureFilm: 'https://www.youtube.com/embed/-BuLMCDLyug',
+    text: 'Laoise and Kyle',
+    couple: 'Laoise and Kyle',
     p: 'Ronan captured our wedding perfectly!',
     galleryLink: '/gallery/wedding1',
+    season: 'Spring',
+    location: 'Mill Park Hotel, Donegal',
   },
   {
     id: 2,
-    image: '/Media/Stills/MAC3.jpg',
-    video: '/public/HomeVideo.mp4',
+    image: '/Media/PortfolioImages/MartinandEilís.png',
     videos: [
       'https://www.youtube.com/embed/MvQnf89Ds5o',
       'https://www.youtube.com/embed/Azh2jhesD8c',
     ],
-    text: 'Ronan captured our wedding perfectly! \n - Martin & Eilis',
-    couple: 'Martin & Eilis',
+    firstLook: 'https://www.youtube.com/embed/MvQnf89Ds5o',
+    highlights: 'https://www.youtube.com/embed/Azh2jhesD8c',
+    text: 'Martin and Eilís',
+    couple: 'Martin and Eilís',
     p: 'Ronan captured our wedding perfectly!',
     galleryLink: '/gallery/wedding1',
+    season: 'Summer',
+    location: 'Rathsallagh, Wicklow',
   },
   {
     id: 3,
-    image: '/Media/Stills/MAC4.jpg',
-    video: '/public/HomeVideo.mp4',
+    image: '/Media/PortfolioImages/AislingandJames.png',
     videos: [
       'https://www.youtube.com/embed/wrhNsJ206jM',
       'https://www.youtube.com/embed/DAmfFkMQ4Fg',
     ],
-    text: 'Ronan captured our wedding perfectly! \n - Aisling & James',
+    firstLook: 'https://www.youtube.com/embed/wrhNsJ206jM',
+    highlights: 'https://www.youtube.com/embed/DAmfFkMQ4Fg',
+    text: 'Aisling and James',
     galleryLink: '/gallery/wedding1',
+    season: 'Spring',
+    location: 'Rockhill House, Donegal',
   },
   {
     id: 4,
-    image: '/Media/Stills/MAC5.jpg',
-    video: '/public/HomeVideo.mp4',
+    image: '/Media/PortfolioImages/PatrickandKarmel.jpg',
     videos: [
       'https://www.youtube.com/embed/x9tO0AQNCt0'
     ],
-    text: 'Ronan captured our wedding perfectly! \n - Patrick & Karmel',
+    firstLook: 'https://www.youtube.com/embed/x9tO0AQNCt0',
+    text: 'Patrick and Karmel',
     galleryLink: '/gallery/wedding1',
+    season: 'Autumn',
+    location: 'Caisleáin Óir, Donegal',
   },
   {
     id: 5,
-    image: '/Media/Stills/MAC6.jpg',
-    video: '/public/HomeVideo.mp4',
+    image: '/Media/PortfolioImages/AmyandBishop.png',
     videos: [
       'https://www.youtube.com/embed/s6qRvsZPZfc'
     ],
-    text: 'Ronan captured our wedding perfectly! \n - Amy & Kevin',
+    firstLook: 'https://www.youtube.com/embed/s6qRvsZPZfc',
+    text: 'Amy and Kevin',
     galleryLink: '/gallery/wedding1',
+    season: 'Summer',
+    location: 'Blue Haven, Donegal',
   },
   {
     id: 6,
-    image: '/Media/Stills/MAC7.jpg',
-    video: '/public/HomeVideo.mp4',
+    image: '/Media/PortfolioImages/BrendanandRuth.jpg',
     videos: [
       'https://www.youtube.com/embed/_qEN29QCrwg'
     ],
-    text: 'Ronan captured our wedding perfectly! \n - Brendan and Ruth',
+    firstLook: 'https://www.youtube.com/embed/_qEN29QCrwg',
+    text: 'Brendan and Ruth',
     galleryLink: '/gallery/wedding1',
+    season: 'Summer',
+    location: 'Langtons, Kilkenny',
   },
 ];
 
 const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
   <Modal isOpen={isOpen} onClose={onClose}>
-    <h2 className="text-3xl mb-4">{testimonial.couple}</h2>
-    <p>{testimonial.p}</p>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+    <h2 className="text-3xl mb-4 font-serif">{testimonial.text}</h2>
+    <p className="text-xl mb-2">{testimonial.location}</p>
+    <p className="text-lg mb-6">{testimonial.season}</p>
+    
+    <div className="flex flex-col gap-8">
       {testimonial.videos.map((videoUrl, index) => (
-        <div key={index} className="aspect-w-16 aspect-h-9">
-          <iframe
-            src={videoUrl}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            title="YouTube video player"
-            className="w-full h-full"
-          ></iframe>
+        <div key={index} className="flex flex-col gap-2">
+          <h3 className="text-2xl font-serif">
+            {index === 0 && "First Look"}
+            {index === 1 && "Highlights"}
+            {index === 2 && "Feature Film"}
+          </h3>
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src={videoUrl}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+              title="YouTube video player"
+              className="w-full h-full"
+            ></iframe>
+          </div>
         </div>
       ))}
     </div>
-    <Button onClick={onClose} className="w-full bg-olivine-500 hover:bg-olivine-600">Close</Button>
+    
+    <Button onClick={onClose} className="w-full bg-olivine-500 hover:bg-olivine-600 mt-6">
+      Close
+    </Button>
   </Modal>
 );
 
