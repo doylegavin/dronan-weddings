@@ -59,8 +59,8 @@ function Home({ openNavigation }) {
 
   const headerContent = useMemo(() => (
     <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50">
-      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-sans `}>
-        Weddings by Dronan Media
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-sans pb-10 `}>
+        Weddings by Dronan Media 
       </h1>
       <br />
       
@@ -71,7 +71,7 @@ function Home({ openNavigation }) {
   return (
     <>
       <section id="home" >
-      <div className="overflow-hidden" >
+      <div className="overflow-hidden pt-24" >
         {/* Header is now rendered in App.js, not here */}
       </div>
       </section>
