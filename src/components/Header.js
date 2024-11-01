@@ -90,7 +90,7 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
      
       <div className="flex items-center px-5 px-7.5 xl:px-10 ">
         <a className="block w-[8rem] xl:mr-8" href='home'>
-          <img src="/Media/dronan_media_logo_copy.svg" alt="DronanMediaLogo" className="" />
+          <img src="/Media/dronan_weddings_logo.png" alt="DronanMediaLogo" className="pt-5" />
         </a>
                 <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[8rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
                   <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row pt-4">
