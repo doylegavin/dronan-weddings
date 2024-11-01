@@ -99,7 +99,7 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                         key={item.id}
                         href={item.url}
                         className={`block relative text-2xl uppercase transition-colors 
-                               hover:bg-olivine-200 hover:shadow-lg 
+                               hover:bg-olivine-400 hover:shadow-lg 
                              text-olivine-950 hover:text-white  
                              ${openNavigation ? ' text-white bg-olivine-200 bg-opacity-50 hover:bg-olivine-200 hover:text-white py-4' : ''}
                          ${
