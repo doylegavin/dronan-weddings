@@ -36,7 +36,6 @@ const packages = [
         'Drone Footage',
         'First Look - 1 Minute (within 48 hours)',
         'Highlight Film (3-4 Minutes)',
-      '2 Videographers',
       'Cinematic Feature Film (18-23 minutes)'
     ],
     image: '/Media/Stills/MAC2.jpg',
@@ -80,41 +79,55 @@ const PackageCard = ({ pkg, onLearnMore }) => (
     </div>
   );
 
-  const PackageModal = ({ isOpen, onClose, pkg }) => (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <h2 className="text-3xl mb-4">{pkg.title} Package</h2>
-      <video className="w-full mb-4 rounded" controls autoPlay loop muted>
-        <source src={pkg.video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <ul className="list-none pl-5 mb-4">
-        {pkg.features.map((feature, index) => (
-          <li key={index} className="flex items-center mb-2">
-            <span className="mr-2">
-
-              {feature.includes('Preparations') && <Camera size={18} />}
-              {feature.includes('Drone') && <Clapperboard size={18} />}
-              {feature.includes('Speeches') && !feature.includes('Full Speeches') && <Speech size={18} />}
-              {feature.includes('Full Speeches') && <MicVocal size={18} />}
-              {feature.includes('Guests') && <Users size={18} />}
-              {feature.includes('Dancing') && <PersonStanding size={18} />}
-              {feature.includes('Ceremony') && <Bell size={18} />}
-              {feature.includes('First Dance') && <Heart size={18} />}
-              {feature.includes('Reception') && <TicketCheck size={18} />}
-              {feature.includes('Videographers') && <Users size={18} />}
-              {feature.includes('Cinematic') && <Film size={18} />}
-              {feature.includes('Highlight') && <Airplay size={18} />}
-              {feature.includes('First Look') && <ScanEye size={18} />}
-            </span>
-            {feature}
-
-                      
-          </li>
-        ))}
-      </ul>
-      <Button onClick={onClose} className="w-full bg-olivine-500 hover:bg-olivine-600">Close</Button>
-    </Modal>
-  );
+  const PackageModal = ({ isOpen, onClose, pkg }) => {
+    // Map package titles to their respective YouTube video URLs
+    const packageVideos = {
+      'Bronze': 'https://www.youtube.com/embed/LwG0tPy1vbQ?autoplay=1',
+    'Silver': 'https://www.youtube.com/embed/h0mi5o9EY7I?autoplay=1',
+    'Gold': 'https://www.youtube.com/embed/9RiEgdrhlL0?autoplay=1'
+  };
+  
+    return (
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <h2 className="text-3xl mb-4">{pkg.title} Package</h2>
+        <div className="aspect-w-16 aspect-h-9 mb-4">
+          <iframe
+            src={packageVideos[pkg.title]}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            title="YouTube video player"
+            className="w-full h-full rounded"
+          ></iframe>
+        </div>
+        <ul className="list-none pl-5 mb-4">
+          {pkg.features.map((feature, index) => (
+            <li key={index} className="flex items-center mb-2">
+              <span className="mr-2">
+                {feature.includes('Preparations') && <Camera size={18} />}
+                {feature.includes('Drone') && <Clapperboard size={18} />}
+                {feature.includes('Speeches') && !feature.includes('Full Speeches') && <Speech size={18} />}
+                {feature.includes('Full Speeches') && <MicVocal size={18} />}
+                {feature.includes('Guests') && <Users size={18} />}
+                {feature.includes('Dancing') && <PersonStanding size={18} />}
+                {feature.includes('Ceremony') && <Bell size={18} />}
+                {feature.includes('First Dance') && <Heart size={18} />}
+                {feature.includes('Reception') && <TicketCheck size={18} />}
+                {feature.includes('Videographers') && <Users size={18} />}
+                {feature.includes('Cinematic') && <Film size={18} />}
+                {feature.includes('Highlight') && <Airplay size={18} />}
+                {feature.includes('First Look') && <ScanEye size={18} />}
+              </span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <Button onClick={onClose} className="w-full bg-olivine-500 hover:bg-olivine-600">Close</Button>
+      </Modal>
+    );
+  };
+  
   
 
 const PackageComparison = () => (
