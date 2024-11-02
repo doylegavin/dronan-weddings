@@ -163,7 +163,7 @@ const PackageSection = () => {
     return (
       <section className="py-12 bg-white" id="packages">
         <div className="container mx-auto">
-          <h2 className="text-4xl text-center mb-8">Our Wedding Packages</h2>
+          <h2 className="text-4xl text-center mb-8 font-semibold">Our Wedding Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 p-4">
             {packages.map((pkg) => (
               <PackageCard key={pkg.id} pkg={pkg} onLearnMore={setSelectedPackage} />

@@ -16,8 +16,8 @@ const portfolio = [
     firstLook: 'https://www.youtube.com/embed/irmetMwmnio',
     highlights: 'https://www.youtube.com/embed/UIF6_Wnq8ac',
     featureFilm: 'https://www.youtube.com/embed/-BuLMCDLyug',
-    text: 'Laoise and Kyle',
-    couple: 'Laoise and Kyle',
+    text: 'LAOISE AND KYLE',
+    couple: 'LAOISE AND KYLE',
     p: 'Ronan captured our wedding perfectly!',
     galleryLink: '/gallery/wedding1',
     season: 'Spring',
@@ -32,8 +32,8 @@ const portfolio = [
     ],
     firstLook: 'https://www.youtube.com/embed/MvQnf89Ds5o',
     highlights: 'https://www.youtube.com/embed/Azh2jhesD8c',
-    text: 'Martin and Eilís',
-    couple: 'Martin and Eilís',
+    text: 'MARTIN AND EILÍS',
+    couple: 'MARTIN AND EILÍS',
     p: 'Ronan captured our wedding perfectly!',
     galleryLink: '/gallery/wedding1',
     season: 'Summer',
@@ -48,7 +48,7 @@ const portfolio = [
     ],
     firstLook: 'https://www.youtube.com/embed/wrhNsJ206jM',
     highlights: 'https://www.youtube.com/embed/DAmfFkMQ4Fg',
-    text: 'Aisling and James',
+    text: 'AISLING AND JAMES',
     galleryLink: '/gallery/wedding1',
     season: 'Spring',
     location: 'Rockhill House, Donegal',
@@ -60,7 +60,7 @@ const portfolio = [
       'https://www.youtube.com/embed/x9tO0AQNCt0'
     ],
     firstLook: 'https://www.youtube.com/embed/x9tO0AQNCt0',
-    text: 'Patrick and Karmel',
+    text: 'PATRICK AND KARMEL',
     galleryLink: '/gallery/wedding1',
     season: 'Autumn',
     location: 'Caisleáin Óir, Donegal',
@@ -72,7 +72,7 @@ const portfolio = [
       'https://www.youtube.com/embed/s6qRvsZPZfc'
     ],
     firstLook: 'https://www.youtube.com/embed/s6qRvsZPZfc',
-    text: 'Amy and Kevin',
+    text: 'AMY AND KEVIN',
     galleryLink: '/gallery/wedding1',
     season: 'Summer',
     location: 'Blue Haven, Donegal',
@@ -84,7 +84,7 @@ const portfolio = [
       'https://www.youtube.com/embed/_qEN29QCrwg'
     ],
     firstLook: 'https://www.youtube.com/embed/_qEN29QCrwg',
-    text: 'Brendan and Ruth',
+    text: 'BRENDAN AND RUTH',
     galleryLink: '/gallery/wedding1',
     season: 'Summer',
     location: 'Langtons, Kilkenny',
@@ -93,14 +93,14 @@ const portfolio = [
 
 const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
   <Modal isOpen={isOpen} onClose={onClose}>
-    <h2 className="text-3xl mb-4 font-serif">{testimonial.text}</h2>
-    <p className="text-xl mb-2">{testimonial.location}</p>
-    <p className="text-lg mb-6">{testimonial.season}</p>
+    <h2 className="text-3xl mb-4 font-semibold italic ">{testimonial.text}</h2>
+    <p className="text-lg italic">{testimonial.location}</p>
+    <p className="text-lg mb-6 italic">{testimonial.season}</p>
     
     <div className="flex flex-col gap-8">
       {testimonial.videos.map((videoUrl, index) => (
         <div key={index} className="flex flex-col gap-2">
-          <h3 className="text-2xl font-serif">
+          <h3 className="text-2xl">
             {index === 0 && "First Look"}
             {index === 1 && "Highlight"}
             {index === 2 && "Feature Film"}
@@ -133,7 +133,7 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
     return (
       <>
         <div className="container mx-auto justify-center">
-          <h2 className="text-3xl font-semibold text-center mb-8">Portfolio</h2>
+          <h2 className="text-4xl font-semibold text-center mb-8">Portfolio</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 justify-center">
           {portfolio.map((testimonial) => (
@@ -153,7 +153,7 @@ const TestimonialModal = ({ isOpen, onClose, testimonial }) => (
                 loading="lazy"
               />
               <div
-                className="absolute max-w-md  flex inset-0 items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-50 opacity-0 group-hover:opacity-100  group-hover:scale-105 transition-opacity text-center"
+                className="absolute max-w-md heading flex inset-0 items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-50 opacity-0 group-hover:opacity-100  group-hover:scale-105 transition-opacity text-center"
                 style={{ clipPath: 'url(#benefits)' }}
               >
                 {testimonial.text}

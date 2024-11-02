@@ -9,7 +9,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Anek Bangla', 'serif'],
       },
       colors: {
         'wedding-pink': '#FFC0CB',
