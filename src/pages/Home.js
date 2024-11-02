@@ -58,12 +58,11 @@ function Home({ openNavigation }) {
   }, []);
 
   const headerContent = useMemo(() => (
-    <div className="relative z-10 flex flex-col items-center justify-center w-full h-full  ">
-      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-thin font-sans pb-10  `}>
+    <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-xl sm:text-3xl md:text-4xl lg:text-6xl font-extralight tracking-[.25em]  pb-10`}>
         DRONAN WEDDINGS 
       </h1>
       <br />
-      
       <br />
     </div>
   ), [openNavigation]);
@@ -91,8 +90,9 @@ function Home({ openNavigation }) {
                   src={src}
                   alt={`Slide ${index}`}
                   className={`slide ${index === currentImageIndex ? 'active' : ''}`}
-                />
+                  />
               ))}
+              {headerContent}
             </div>
           )}
           {headerContent}

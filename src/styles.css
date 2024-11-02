@@ -1,0 +1,24 @@
+.custom-header {
+  color: white !important;
+  font-size: 2rem !important; /* Adjust as needed */
+  font-weight: 200 !important; /* Tailwind's font-extralight */
+  letter-spacing: 0.1em !important; /* Tailwind's tracking-widest */
+}
+
+@media (min-width: 640px) {
+  .custom-header {
+    font-size: 3rem !important; /* Adjust as needed */
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-header {
+    font-size: 4rem !important; /* Adjust as needed */
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-header {
+    font-size: 6rem !important; /* Adjust as needed */
+  }
+}
