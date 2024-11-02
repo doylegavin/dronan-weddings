@@ -13,7 +13,7 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="flex justify-center gap-4 ">
+          <div className="flex justify-center gap-4 pr-10 ">
             {[
               { href: "https://www.facebook.com/profile.php?id=61567868939863", icon: FaFacebookF, hoverColor: "hover:bg-[#405de6] hover:text-white" },              
               { href: "https://www.instagram.com/dronanweddings/", icon: FaInstagram, hoverColor: "hover:bg-gradient-to-tr from-[#fcaf45] via-[#e1306c] to-[#833ab4] hover:text-white" },          
