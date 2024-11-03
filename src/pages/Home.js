@@ -8,6 +8,7 @@ import TestimonialSlider from '../components/TestimonialSlider';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
+import ElopementTestimonials from '../components/ElopementTestimonials';
 
 const Portfolio = React.lazy(() => import('../components/Portfolio'));
 
@@ -59,7 +60,7 @@ function Home({ openNavigation }) {
 
   const headerContent = useMemo(() => (
     <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-xl sm:text-3xl md:text-4xl lg:text-6xl font-extralight tracking-[.25em]  pb-10`}>
+      <h1 className={`${openNavigation ? 'hidden' : 'block'} text-white z-20 text-md sm:text-3xl md:text-4xl lg:text-6xl font-extralight tracking-[.5em]  pb-10`}>
         DRONAN WEDDINGS 
       </h1>
       <br />
@@ -129,17 +130,17 @@ function Home({ openNavigation }) {
    <section id="packages">
         <PackagesSection  />
         </section>
-        <section id="testimonials">
-        <TestimonialSlider  />
-        </section>
 {/* About section */}
 
        {/*  <Elopements /> */}
       </div>
       <section id="Testimonials" ><Testimonials  /></section>
+        <section id="testimonials">
+        <TestimonialSlider  />
+        </section>
+      <section id="ElopementTestimonials" ><ElopementTestimonials  /></section>
       <section id="about" ><About  /></section>
       <section id="contact" ><Contact  /></section>
-    
       <div>
       {!openNavigation && <ContactButton />}
       </div>
