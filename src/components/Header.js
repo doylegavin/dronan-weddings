@@ -17,7 +17,9 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
       enablePageScroll();
       
       if (e && e.target.tagName === 'A') {
+        e.preventDefault(); // Prevent default link behavior
         // If a navigation link was clicked
+        
         setTimeout(() => {
           const targetId = e.target.getAttribute('href');
           const targetElement = document.querySelector(targetId);
@@ -89,7 +91,7 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
  */}
      
       <div className="flex items-center px-5 px-7.5 xl:px-10 ">
-        <a className="block w-[8rem] xl:mr-8" href='home'>
+        <a className="block w-[8rem] xl:mr-8" href='/'>
           <img src="/Media/dronan_weddings_logo.png" alt="DronanMediaLogo" className="pt-5" />
         </a>
                 <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[8rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
@@ -107,7 +109,26 @@ const Header = ({ openNavigation, setOpenNavigation }) => {
                         } px-6 py-4 md:py-6 my-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                           item.url === pathname.hash ? 'z-2 ' : ''
                         } lg:leading-5 xl:px-12 rounded-md`}
-                        onClick={toggleNavigation}
+                        onClick={(e) => {
+                          if (openNavigation) {
+                            e.preventDefault(); // Prevent default link behavior only when navigation is open
+                            toggleNavigation(e);
+                          } else {
+                            // Adjust scroll position to account for header height
+                            const targetId = e.target.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                              e.preventDefault(); // Prevent default link behavior
+                              const headerHeight = document.querySelector('.fixed').offsetHeight;
+                              const elementPosition = targetElement.getBoundingClientRect().top;
+                              const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                              window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                              });
+                            }
+                          }
+                        }}
                       >
                         {item.title}
                         

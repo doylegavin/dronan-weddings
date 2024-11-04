@@ -1,6 +1,4 @@
-
 export const navigation = [
- 
   {
     id: "0",
     title: "Portfolio",
@@ -9,12 +7,12 @@ export const navigation = [
   {
     id: "1",
     title: "Packages",
-    url: "#Packages",
+    url: "#packages",
   },
   {
     id: "2",
     title: "Elopements",
-    url: "#Elopements",
+    url: "#ElopementTestimonials",
   },
   {
     id: "3",
