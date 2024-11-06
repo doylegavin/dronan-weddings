@@ -37,8 +37,8 @@ const ElopementTestimonials = () => {
             }`}
           >
             <div className="md:w-1/2 p-4">
-              <h2 className="text-lg italic  mb-4">{testimonial.heading}</h2>
-              <p className="text-lg font-semibold ">{testimonial.p}</p>
+              <h2 className="text-lg font-bold   mb-4">{testimonial.heading}</h2>
+              <p className="text-lg  ">{testimonial.p}</p>
             </div>
             <div className="relative md:w-1/2 p-4">
               <div className="absolute inset-0 bg-peach-light -z-10 rounded-lg transform scale-105" />

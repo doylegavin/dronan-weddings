@@ -67,7 +67,7 @@ const handleSubmit = (e) => {
   return (
     <section id="contact" className="py-12 ">
       <div className="container mx-auto p-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Enquire Now</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <label className="block text-lg font-medium mb-2" htmlFor="name">Name</label>
