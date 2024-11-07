@@ -18,7 +18,7 @@ const testimonials = [
   }, 
   {
     heading: "Your Dream Elopement Awaits",
-    p: "For couples looking for an intimate wedding experience surrounded by Ireland’s most stunning scenery, Donegal offers everything you could dream of. Reach out today, and let’s start planning your bespoke elopement in this magical part of the world. Video for the Elopement Page",
+    p: "For couples looking for an intimate wedding experience surrounded by Ireland’s most stunning scenery, Donegal offers everything you could dream of. Reach out today, and let’s start planning your bespoke elopement in this magical part of the world.",
     image: "Media/Stills/MAC5.jpg",
   },
   // Add more testimonials as needed
