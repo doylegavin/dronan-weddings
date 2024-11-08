@@ -7,9 +7,12 @@ import 'slick-carousel/slick/slick-theme.css';
 const TestimonialSlider = () => {
 
 const testimonials = [
-    { name: 'Sarah & John', text: 'Our elopement video was absolutely magical!' },
-    { name: 'Emily & Mike', text: 'Captured our special day perfectly in the Irish landscape.' },
-    { name: 'Gavin & Ronan', text: 'The most amazing experience we could ever ask for' },
+    { name: 'Hughie & Andrea', text: 'Ronan was so professional, his ideas and suggestions were insane.' },
+    { name: 'Jane & Barry', text: 'Ronan truly went above and beyond and captured everything and more.' },
+    { name: 'Mags & Conor', text: 'Ronan was utterly professional as well as being fun, making us laugh and feel relaxed for the entire day' },
+    { name: 'Eilis & Martin', text: 'We were absolutely blown away by the Video we received, we wore it out with the amount of times we watched it!'},
+    { name: 'Aoife & Michael', text: 'Ronan was such a pleasure to deal with on the lead up, both full of suggestions and very open to ours.'},
+    { name: 'Orla & Niall', text: 'Ronan manages to capture every emotional moment and incorporate the scenery with his drone and also crafts the best parts into a wonderful story'},
   ];
 
   const settings = {
@@ -50,7 +53,7 @@ const testimonials = [
 {/* Testimonials Section */}
 <section id="testimonials" className="py-16  w-full ">
 <div className="w-full ">
-  <h2 className="text-4xl font-bold mb-8 text-center">What Couples Say</h2>
+  <h2 className=" text-3xl md:text-4xl font-bold mb-8 text-center">What Couples Say</h2>
   <Slider {...settings}>
     {testimonials.map((testimonial, index) => (
       <div key={index} className="px-4 pt-4 pb-8">

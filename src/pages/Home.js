@@ -27,9 +27,7 @@ const images = [
   '/Media//LandingPage/LandingPage12.jpg',
   '/Media//LandingPage/LandingPage13.jpg',
   '/Media//LandingPage/LandingPage14.jpg',
-  '/Media//LandingPage/LandingPage15.jpg',
-  '/Media//LandingPage/LandingPage16.jpg',
-  '/Media//LandingPage/LandingPage17.jpg',
+  
   
 ];
 
@@ -134,11 +132,11 @@ function Home({ openNavigation }) {
 
        {/*  <Elopements /> */}
       </div>
-      <section id="Testimonials" ><Testimonials  /></section>
+      <section id="ElopementTestimonials" ><ElopementTestimonials  /></section>
         <section id="testimonials">
         <TestimonialSlider  />
         </section>
-      <section id="ElopementTestimonials" ><ElopementTestimonials  /></section>
+      <section id="Testimonials" ><Testimonials  /></section>
       <section id="about" ><About  /></section>
       <section id="contact" ><Contact  /></section>
       <div>

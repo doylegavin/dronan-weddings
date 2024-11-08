@@ -70,7 +70,7 @@ const handleSubmit = (e) => {
         <h2 className="text-3xl font-bold text-center mb-8">Enquire Now</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="name">Name</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -82,7 +82,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="email">Email</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -94,7 +94,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="phone">Phone Number</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
@@ -106,7 +106,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="message">Message</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"
@@ -118,7 +118,7 @@ const handleSubmit = (e) => {
             ></textarea>
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="date"> Date</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="date"> Date</label>
             <input
               type="date"
               id="date"
@@ -130,7 +130,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="location"> Location</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="location"> Location</label>
             <input
               type="text"
               id="location"
@@ -142,7 +142,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg font-medium mb-2" htmlFor="hearAboutUs">How did you hear about us?</label>
+            <label className="block text-lg font-medium mb-2 font-sans" htmlFor="hearAboutUs">How did you hear about us?</label>
             <select
               id="hearAboutUs"
               name="hearAboutUs"

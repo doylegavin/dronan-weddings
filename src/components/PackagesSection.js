@@ -69,7 +69,7 @@ const packages = [
 const PackageCard = ({ pkg, onLearnMore }) => (
     <div className="p-6 bg-olivine-100 rounded-lg shadow-lg flex flex-col h-full">
       <img src={pkg.image} alt={pkg.title} className="w-full h-40 object-cover rounded-lg mb-4" />
-      <h3 className="text-2xl  mb-2">{pkg.title}</h3>
+      <h3 className="text-2xl  mb-2 font-bold">{pkg.title}</h3>
       <p className="mb-4 flex-grow ">{pkg.description}</p>
       {/* <p className="text-lg font-bold mb-4 font-serif">{pkg.price}</p> */}
       <Button onClick={() => onLearnMore(pkg)} className="w-full py-2 bg-olivine-300 hover:bg-olivine-400">
@@ -89,7 +89,7 @@ const PackageCard = ({ pkg, onLearnMore }) => (
   
     return (
       <Modal isOpen={isOpen} onClose={onClose}>
-        <h2 className="text-3xl mb-4">{pkg.title} Package</h2>
+        <h2 className="text-3xl mb-4 font-bold">{pkg.title} Package</h2>
         <div className="aspect-w-16 aspect-h-9 mb-4">
           <iframe
             src={packageVideos[pkg.title]}

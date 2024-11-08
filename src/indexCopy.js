@@ -26,7 +26,7 @@ export const navigation = [
   },
   {
     id: "5",
-    title: "Contact",
+    title: "Enquire Now",
     url: "#contact",
     onlyMobile: true,
   },
