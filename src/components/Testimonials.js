@@ -13,13 +13,19 @@ const testimonials = [
     author: "Orla & Niall",
     image: "Media/Testimonials/Testimonial2.jpg",
   },
+  // Add more testimonials as needed
   {
     quote:
       "Myself & my wife Eilís could not recommend Ronan & his team highly enough. From our first meeting he was the epitome of professionalism & quality.  He was able to put us at ease with his knowledge straight away and answered any & all questions we had about logistics for the wedding day. On the day itself Ronan & team were asked discreet as could be but got every single video that we were looking for. We were absolutely blown away by the 2-minute promo video we received - the edits were unbelievable and we wore it out with the amount of times we watched it! The final element that we were so thankful for was the feature length piece which was put together exceptionally well. We couldn't have asked for any more from the experience with Ronan & would recommend him for anyone looking to hire a videographer for their big day.",
     author: "Martin & Eilís",
     image: "Media/Testimonials/Testimonial3.png",
   },
-  // Add more testimonials as needed
+  {
+    quote:
+      "Ronan gave us the day of our lives when he agreed to photograph the Donegal edition of our Elopement. It’s fair to say this was no easy task as we wanted to spend the day travelling to several of our favourite locations throughout Donegal. However, this was no trouble to Ronan. He remained utterly professional as well as being fun, making us laugh and relaxed the entire day. Ronan managed to capture on film what sums up our relationship - love, laughs, affection, adventure and the great outdoors. Ronan had the itinerary off to a tee, keeping us on track and on time. He gave us direction for poses and different angles to try which was super helpful as we were quite clueless in that regard. He made the entire day run smoothly and we are forever grateful to him. Then, came the actual photos which I think will speak for themselves. They were beyond anything we could have ever imagined. We can’t recommend Ronan highly enough and wish to again thank him for agreeing to our outside of the box idea and for making our day as special as it was.",
+    author: "Mags & Conor",
+    image: "Media/Stills/MAC9.jpg",
+  },
 ];
 
 const TestimonialSection = () => {

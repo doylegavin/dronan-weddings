@@ -28,6 +28,5 @@ export const navigation = [
     id: "5",
     title: "Enquire Now",
     url: "#contact",
-    onlyMobile: true,
   },
 ];
