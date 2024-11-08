@@ -16,7 +16,6 @@ const images = [
   '/Media//LandingPage/LandingPage1.jpg',
   '/Media//LandingPage/LandingPage2.jpg',
   '/Media//LandingPage/LandingPage3.jpg',
-  '/Media//LandingPage/LandingPage4.jpg',
   '/Media//LandingPage/LandingPage5.jpg',
   '/Media//LandingPage/LandingPage6.jpg',
   '/Media//LandingPage/LandingPage7.jpg',
